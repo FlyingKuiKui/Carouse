@@ -15,6 +15,9 @@
 		743FD0A31CE02BA90030626E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743FD0A11CE02BA90030626E /* LaunchScreen.storyboard */; };
 		743FD0AE1CE02BA90030626E /* CarouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 743FD0AD1CE02BA90030626E /* CarouseTests.m */; };
 		743FD0B91CE02BA90030626E /* CarouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 743FD0B81CE02BA90030626E /* CarouseUITests.m */; };
+		743FD0C81CE02D0A0030626E /* WSKCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743FD0C71CE02D0A0030626E /* WSKCarouselView.m */; };
+		743FD0CB1CE082AD0030626E /* WSKCarouselSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743FD0CA1CE082AD0030626E /* WSKCarouselSubView.m */; };
+		74530D231D110CA400A41E20 /* NSString+StringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74530D221D110CA400A41E20 /* NSString+StringCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		743FD0B41CE02BA90030626E /* CarouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		743FD0B81CE02BA90030626E /* CarouseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouseUITests.m; sourceTree = "<group>"; };
 		743FD0BA1CE02BA90030626E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		743FD0C61CE02D0A0030626E /* WSKCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKCarouselView.h; sourceTree = "<group>"; };
+		743FD0C71CE02D0A0030626E /* WSKCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKCarouselView.m; sourceTree = "<group>"; };
+		743FD0C91CE082AD0030626E /* WSKCarouselSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKCarouselSubView.h; sourceTree = "<group>"; };
+		743FD0CA1CE082AD0030626E /* WSKCarouselSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKCarouselSubView.m; sourceTree = "<group>"; };
+		74530D211D110CA400A41E20 /* NSString+StringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringCategory.h"; sourceTree = "<group>"; };
+		74530D221D110CA400A41E20 /* NSString+StringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,12 @@
 				743FD0971CE02BA90030626E /* AppDelegate.m */,
 				743FD0991CE02BA90030626E /* ViewController.h */,
 				743FD09A1CE02BA90030626E /* ViewController.m */,
+				74530D211D110CA400A41E20 /* NSString+StringCategory.h */,
+				74530D221D110CA400A41E20 /* NSString+StringCategory.m */,
+				743FD0C61CE02D0A0030626E /* WSKCarouselView.h */,
+				743FD0C71CE02D0A0030626E /* WSKCarouselView.m */,
+				743FD0C91CE082AD0030626E /* WSKCarouselSubView.h */,
+				743FD0CA1CE082AD0030626E /* WSKCarouselSubView.m */,
 				743FD09C1CE02BA90030626E /* Main.storyboard */,
 				743FD09F1CE02BA90030626E /* Assets.xcassets */,
 				743FD0A11CE02BA90030626E /* LaunchScreen.storyboard */,
@@ -274,7 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				743FD09B1CE02BA90030626E /* ViewController.m in Sources */,
+				743FD0CB1CE082AD0030626E /* WSKCarouselSubView.m in Sources */,
 				743FD0981CE02BA90030626E /* AppDelegate.m in Sources */,
+				743FD0C81CE02D0A0030626E /* WSKCarouselView.m in Sources */,
+				74530D231D110CA400A41E20 /* NSString+StringCategory.m in Sources */,
 				743FD0951CE02BA90030626E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +434,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Carouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carouse",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShengkuiWang.Carouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -427,6 +449,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Carouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carouse",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShengkuiWang.Carouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -499,6 +525,7 @@
 				743FD0BF1CE02BA90030626E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		743FD0C01CE02BA90030626E /* Build configuration list for PBXNativeTarget "CarouseTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +534,7 @@
 				743FD0C21CE02BA90030626E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		743FD0C31CE02BA90030626E /* Build configuration list for PBXNativeTarget "CarouseUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +543,7 @@
 				743FD0C51CE02BA90030626E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

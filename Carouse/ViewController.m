@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import "WSKCarouselView.h"
+#import "NSString+StringCategory.h"
+
+@interface ViewController ()<WSKCarouselViewDelegate>
 
 @end
 
@@ -16,7 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    WSKCarouselView *CarouselView = [WSKCarouselView carouselViewWithFrame:CGRectMake(10, 100, 300, 400) RollDirection:RollDirection_Vertical];
+    CarouselView.dataArray = @[@"c1",@"c2",@"c3",@"c4",@"c5"];
+    CarouselView.time = 2;
+    CarouselView.delegate = self;
+    [self.view addSubview:CarouselView];
+    
+    NSString *string = @"这是一这是个测试这是测试";
+    for (NSString *temp in [string subStringFromString:@"这是" ToString:@"测试"]) {
+        NSLog(@"%@",temp);
+    }
+}
+
+
+
+- (void)clickViewWithCurrentIndex:(NSInteger)currentIndex{
+    NSLog(@"%ld",(long)currentIndex);
 }
 
 - (void)didReceiveMemoryWarning {
