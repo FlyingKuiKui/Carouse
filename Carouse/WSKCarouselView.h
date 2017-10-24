@@ -95,7 +95,8 @@ typedef void(^ClickViewBlock)(NSInteger index);
  @param pageImage 其他页码的图片
  @param currentImage 当前页码的图片
  */
-- (void)setPageImage:(UIImage *_Nullable)pageImage andCurrentImage:(UIImage *_Nullable)currentImage;
+- (void)setPageImage:(UIImage *_Nullable)pageImage
+     andCurrentImage:(UIImage *_Nullable)currentImage;
 
 /**
  设置分页控件指示器的颜色
@@ -103,6 +104,7 @@ typedef void(^ClickViewBlock)(NSInteger index);
  @param color 其他页码的颜色
  @param currentColor 当前页码的颜色
  */
-- (void)setPageColor:(UIColor *_Nullable)color andCurrentPageColor:(UIColor *_Nullable)currentColor;
+- (void)setPageColor:(UIColor *_Nullable)color
+ andCurrentPageColor:(UIColor *_Nullable)currentColor;
 
 @end
