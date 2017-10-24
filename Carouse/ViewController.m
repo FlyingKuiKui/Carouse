@@ -19,11 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+UITableView
     WSKCarouselView *CarouselView = [WSKCarouselView carouselViewWithFrame:CGRectMake(10, 100, 300, 400) RollDirection:RollDirection_Vertical];
     CarouselView.dataArray = @[@"c1",@"c2",@"c3",@"c4",@"c5"];
     CarouselView.time = 2;
     CarouselView.delegate = self;
+    CarouselView.isShowPageControl = YES;
+    CarouselView._creat = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    
     [self.view addSubview:CarouselView];
     
     NSString *string = @"这是一这是个测试这是测试";
@@ -32,8 +35,7 @@
     }
 }
 
-
-
+#pragma mark - WSKCarouselViewDelegate
 - (void)clickViewWithCurrentIndex:(NSInteger)currentIndex{
     NSLog(@"%ld",(long)currentIndex);
 }

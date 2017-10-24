@@ -109,7 +109,8 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame RollDirection:(RollDirection)rollDirection{
+- (instancetype _Nullable)initWithFrame:(CGRect)frame
+                          RollDirection:(RollDirection)rollDirection{
     self = [super initWithFrame:frame];
     if (self){
         self.pagePosition = PagePosition_None;
@@ -120,11 +121,11 @@
         }
         [self addSubview:self.scrollView];
         [self addSubview:self.pageControl];
-
     }
     return self;
 }
-+ (instancetype)carouselViewWithFrame:(CGRect)frame RollDirection:(RollDirection)rollDirection{
++ (instancetype _Nullable)carouselViewWithFrame:(CGRect)frame
+                                  RollDirection:(RollDirection)rollDirection{
     return [[self alloc] initWithFrame:frame RollDirection:rollDirection];
 }
 #pragma mark - 初始化
@@ -173,6 +174,12 @@
     self.pageControl.pageIndicatorTintColor = color;
     //  设置当前页码指示器的颜色
     self.pageControl.currentPageIndicatorTintColor = currentColor;
+}
+- (void)setIsShowPageControl:(BOOL)isShowPageControl{
+    _isShowPageControl = isShowPageControl;
+    if (isShowPageControl != YES) {
+        [self.pageControl removeFromSuperview];
+    }
 }
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -342,6 +349,7 @@
 - (void)setDataForNextView{
     self.nextView.strData = self.dataArray[self.nextIndex];
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
